@@ -42,6 +42,9 @@ require_once(DOKU_TPLINC . 'tpl_functions.php');
   <a href="#" name="dokuwiki__top">&nbsp;</a>
 
   <div id="content">
+		<?php if($ID != 'start') { ?>
+			<div id="breadcrumbs">&larr; <?php tpl_pagelink('start', 'Wistia Documentation') ?></div>
+		<?php } ?>
     <?php $toc = tpl_toc(true)?>
     <?php if($toc) { ?>
     <?php print $toc ?>
@@ -64,7 +67,7 @@ require_once(DOKU_TPLINC . 'tpl_functions.php');
   <div id="sidebar">
     <div id="header">
       <div class="logo">
-        <?php tpl_link(wl(),$conf['title'],'name="dokuwiki__top" id="dokuwiki__top" accesskey="h" title="[H]"')?>
+        <?php tpl_link(wl(),"",'name="dokuwiki__top" id="dokuwiki__top" accesskey="h" title="[H]"')?>
       </div>
       <?php tpl_navigation() ?>
     </div>

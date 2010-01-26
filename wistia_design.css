@@ -1,12 +1,13 @@
 /**
- * CSS for DokuWiki template Typo
- *
+ * CSS for DokuWiki template Wistia
+ * 
+ * Based on the DokuWiki Typo template
  * @author Michael Klier <chi@chimeric.de> 
  */
 body {
   margin: 0;
   font-size: 100%;
-  background: __text__;
+  background: __sidebar_background__;
 }
 
 div.dokuwiki {
@@ -22,8 +23,12 @@ div.dokuwiki div#header {
   width: 100%;
 }
 
-div.dokuwiki .logo {
-  font-size: 280%;
+div.dokuwiki .logo a {
+  display: block;
+	width: 220px;
+	height: 35px;
+	background: url('images/wistia_logo.png') no-repeat;
+	font-size: 280%;
   line-height: 100%;
   text-align: left;
   color: __background_alt__;
@@ -55,8 +60,8 @@ div.dokuwiki div.navigation div.li {
 }
 
 div.dokuwiki div.navigation div.li a {
-  color: __background__ !important;
-  font-size: 160%;
+  color: __text__ !important;
+  font-size: 120%;
   line-height: 120%;
   text-decoration: none;
   display: block;
@@ -92,19 +97,20 @@ div.dokuwiki div#bar__bottom {
 }
 
 div.dokuwiki div#content {
-  background: __background__;
+  background: __background__ url('images/sidebar_gradient.png') repeat-y right top;
   width: 70%;
   position: absolute;
   left: 0;
   top: 0;
-  min-height: 1600px;
+  min-height: 1200px;
+	padding-right: 2em;
 }
 
 div.dokuwiki div#sidebar {
   color: __background_alt__;
-  padding-left: 2em;
+  padding-left: 2.5em;
   padding-right: 2em;
-  padding-top: 0.3em;
+  top: 2em;
   position: absolute;
   left: 70%;
 }
@@ -135,6 +141,10 @@ div.dokuwiki div#pagemeta {
 
 div.dokuwiki div#pagemeta a {
   margin: 0 1em 0 1em;
+}
+
+#qsearch__in {
+	width: 10em;
 }
 
 div.dokuwiki div#search {
@@ -178,9 +188,8 @@ div.dokuwiki div#bar__bottom {
 }
 
 div.dokuwiki div.page {
-  padding: 2em 2.5em 2em 2.5em;
+  padding: 1em 2.5em 2em 2.5em;
   margin: 0;
-  border-right: 1px dotted __border__;
 }
 
 div.dokuwiki h1 a,
@@ -202,6 +211,9 @@ div.dokuwiki h2 {
 
 div.dokuwiki h1 {
   font-size: 180%;
+	background: #F1EFEB;
+	padding: .4em .8em;
+	border-bottom: 1px solid #D5D2CD;
 }
 div.dokuwiki h1 a {
   font-weight: bold !important;
@@ -210,6 +222,9 @@ div.dokuwiki h1 a {
 div.dokuwiki h2 {
   font-size: 140%;
   margin-left: 0;
+	border-bottom: 1px solid #D5D2CD;
+	padding: .4em .8em;
+	margin-top: 1em;
 }
 
 div.dokuwiki h2 a {
@@ -226,9 +241,13 @@ div.dokuwiki div#toc__header {
   background: __background_alt__;
   margin: 0;
   font-size: 150%;
-  color: __text__;
+  color: #fff;
   border: none;
   padding: 0.5em;
+	-moz-border-radius: 10px 10px 0 0;
+  -webkit-border-top-right-radius: 10px;
+  -webkit-border-top-left-radius: 10px;
+  border-radius: 10px 10px 0 0;
 }
 
 div.dokuwiki div.toc {
@@ -236,7 +255,7 @@ div.dokuwiki div.toc {
   padding: 0;
   font-size: 100%;
   float: left;
-  margin: 1.8em 1.8em 0em 1.8em;
+  margin: 0em 1.8em 0em 1.8em;
 }
 
 div.dokuwiki div.toc ul {
@@ -254,8 +273,12 @@ div.dokuwiki div.toc a {
 
 div.dokuwiki div#toc__inside {
   border: none;
-  padding: 0 1.8em 1.8em 1.8em;
-  background: __background_alt__;
+  padding: 1em 1.8em 1.8em 1em;
+  background: #cbff61;
+	-moz-border-radius: 0 0 10px 10px;
+  -webkit-border-bottom-right-radius: 10px;
+  -webkit-border-bottom-left-radius: 10px;
+  border-radius: 0 0 10px 10px;
 }
 
 div.dokuwiki span.toc_open,
@@ -273,12 +296,12 @@ div.dokuwiki span.toc_close span {
 
 div.dokuwiki span.toc_open {
   margin-top: 0.4em;
-  border-top: 0.4em solid #202020;
+  border-top: 0.4em solid #ffffff;
 }
 
 div.dokuwiki span.toc_close {
   margin-top: 0;
-  border-bottom: 0.4em solid #202020;
+  border-bottom: 0.4em solid #ffffff;
 }
 
 div.dokuwiki pre.code,
@@ -395,3 +418,35 @@ div.dokuwiki div.comment_wrapper {
 /**
  * vim:ts=2:sw=2:et:enc=utf-8:
  */
+
+ 
+.notify {
+	position: absolute;
+	z-index: 199;
+}
+
+.hiddenHead {
+	padding: .5em 1em .5em 2em;
+	background: #fff url(images/closed.gif) no-repeat 1em center;
+	font-weight: bold;
+	border-bottom: 1px solid #ccc;	
+}
+
+.hiddenBody {
+	padding: .5em 2em;
+	border: 0
+}
+
+.hiddenGlobal {
+	border: 0;
+	margin-bottom: .5em;
+	background-color: #F7F6F4;
+}
+
+#breadcrumbs {
+	padding: .3em 1em;
+}
+
+div.dokuwiki div.section_highlight {
+	background-color: #f0ddff;
+}
