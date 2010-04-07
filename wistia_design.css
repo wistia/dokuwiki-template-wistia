@@ -307,7 +307,7 @@ div.dokuwiki span.toc_close {
 div.dokuwiki pre.code,
 div.dokuwiki pre.file {
   font-size: 90% !important;
-  background: __background__;
+  background: #F1F1EB;
 }
 
 div.dokuwiki code {
