@@ -24,8 +24,7 @@ require_once(DOKU_TPLINC . 'tpl_functions.php');
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>
-    <?php tpl_pagetitle()?>
-    [<?php echo strip_tags($conf['title'])?>]
+    <?php tpl_pagetitle()?> - <?php echo strip_tags($conf['title'])?>
   </title>
 
   <?php tpl_metaheaders()?>
