@@ -188,7 +188,8 @@ div.dokuwiki div#bar__bottom {
 }
 
 div.dokuwiki div.page {
-  padding: 1em 2.5em 2em 2.5em;
+  text-align: left;
+	padding: 1em 2.5em 2em 2.5em;
   margin: 0;
 }
 
