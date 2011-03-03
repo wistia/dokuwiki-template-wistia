@@ -104,5 +104,6 @@ require_once(DOKU_TPLINC . 'tpl_functions.php');
 <script type="text/javascript">clicky.init(176958);</script>
 <noscript><p><img alt="Clicky" width="1" height="1" src="http://static.getclicky.com/176958ns.gif" /></p></noscript>
 
+<script src="//d1nu2rn22elx8m.cloudfront.net/performable/pax/6fK5hD.js" type="text/javascript"></script>
 </body>
 </html>
