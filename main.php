@@ -30,6 +30,7 @@ require_once(DOKU_TPLINC . 'tpl_functions.php');
   <?php tpl_metaheaders()?>
 
   <link rel="shortcut icon" href="<?php echo DOKU_TPL?>images/favicon.ico" />
+  <script src="jquery-1.7.2.min.js" type="text/javascript"></script>
 
   <?php /*old includehook*/ @include(dirname(__FILE__).'/meta.html')?>
 </head>
